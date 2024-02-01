@@ -39,7 +39,7 @@ public class Conta {
         return (saldo < 0);
     }
     
-    
+
     public void transferir(float valor, Conta c) {
         if (sacar(valor)) {
             c.depositar(valor);
