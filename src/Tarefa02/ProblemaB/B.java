@@ -7,7 +7,7 @@ public class B {
         while(true){ //testando todas as formas
             String s2 = t.DataFormatada2();
             System.out.println(s2);
-            if(s2.equals("0:00:00 AM")) break;
+            if(s2.equals("00:00:00 AM")) break;
             t.incrementarSegundo();
         }
     }    
