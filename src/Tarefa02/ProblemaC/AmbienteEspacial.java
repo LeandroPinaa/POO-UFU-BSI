@@ -26,6 +26,14 @@ public class AmbienteEspacial {
                 else System.out.println("Limite de naves atingido.");
             }
             if(op == 2){
+                int qtd=0;
+                for(int i=0;i<sz;i++){
+                    if(v[i].getVelocidade()==0) qtd++;
+                }
+                if(qtd == sz){
+                    System.out.println("Todas as naves já estão paradas. Tente outro comando.");
+                    continue;
+                }
                 System.out.println("As naves em movimento são: ");
                 for(int i=0;i<sz;i++){
                     if(v[i].getVelocidade()>0){
@@ -52,6 +60,14 @@ public class AmbienteEspacial {
                 }
             }
             if(op == 3){
+                int qtd=0;
+                for(int i=0;i<sz;i++){
+                    if(v[i].getVelocidade()>0) qtd++;
+                }
+                if(qtd == sz){
+                    System.out.println("Todas as naves já estão em movimento. Tente outro comando.");
+                    continue;
+                }
                 System.out.println("As naves paradas são: ");
                 for(int i=0;i<sz;i++){
                     if(v[i].getVelocidade()==0){
